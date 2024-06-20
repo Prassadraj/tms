@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
+  // console.log()
   return (
     <header
       className="h-[10vh] bg-bgBlack w-full flex justify-between items-center border-b-[1px]

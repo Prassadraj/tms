@@ -17,7 +17,7 @@ function Side() {
           <Link to="/dashboard">
             <div
               className={`flex w-[15vw] rounded-lg p-3 items-center justify-center ${
-                location.pathname == "/dashboard" ? "bg-bgGray" : ""
+                location.pathname === "/dashboard" ? "bg-bgGray" : ""
               }`}
             >
               <div className="flex justify-center items-center mr-7">
@@ -29,7 +29,7 @@ function Side() {
           <Link to="/ticket">
             <div
               className={`flex w-[15vw] p-3 items-center justify-center rounded-lg ${
-                location.pathname == "/ticket" ? "bg-bgGray" : ""
+                location.pathname === "/ticket" ? "bg-bgGray" : ""
               }`}
             >
               <div className="flex justify-center items-center mr-7">
@@ -41,7 +41,7 @@ function Side() {
           <Link to="/analytics">
             <div
               className={`flex w-[15vw] p-3 items-center justify-center rounded-lg ${
-                location.pathname == "/analytics" ? "bg-bgGray" : ""
+                location.pathname === "/analytics" ? "bg-bgGray" : ""
               }`}
             >
               <div className="flex justify-center items-center mr-8">
