@@ -13,7 +13,8 @@ import DashBoard from "./components/DashBoard/DashBoard";
 import Analytics from "./components/Analytics/Analytics";
 import Login from "./components/Login/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // Import other components for routes
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ToastContainer />
         {isAuthenticated ? (
           <>
             <Header />

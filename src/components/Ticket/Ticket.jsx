@@ -1,6 +1,7 @@
 import { faPaperclip, faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const Ticket = () => {
   const [formData, setFormData] = useState({
@@ -29,33 +30,36 @@ const Ticket = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("http://localhost/TMS/backend/submit.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const result = await response.json();
-      setSubmissionStatus({ success: true, message: result.message });
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000);
-    } catch (error) {
-      setSubmissionStatus({
-        success: false,
-        message:
-          "There was a problem with your fetch operation: " + error.message,
-      });
-    }
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await fetch("http://localhost/TMS/backend/submit.php", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
+  //     if (!response.ok) {
+  //       throw new Error("Network response was not ok");
+  //     }
+  //     const result = await response.json();
+  //     setSubmissionStatus({ success: true, message: result.message });
 
+  //     setTimeout(() => {
+  //       window.location.reload();
+  //     }, 1000);
+  //   } catch (error) {
+  //     setSubmissionStatus({
+  //       success: false,
+  //       message:
+  //         "There was a problem with your fetch operation: " + error.message,
+  //     });
+  //   }
+  // };
+  const handleSubmit = () => {
+    toast.success("Added");
+  };
   return (
     <div className="bg-bgBlack max-w-full mx-auto p-6 overflow-y-auto max-h-[90vh] ticket-scroll font-poppins">
       <div className="max-w-5xl mt-5 bg-bgGray p-5 rounded-lg">

@@ -3,6 +3,7 @@ import img from "../../images/Login/sampatLogo.png";
 import user from "../../images/Login/user.png";
 import pass from "../../images/Login/password.png";
 import "./login.css";
+
 import { useNavigate } from "react-router-dom";
 // import { sendData } from "./encrypt";
 
@@ -98,7 +99,12 @@ function Login({ onLogin }) {
                 className="mt-2"
                 style={{ color: "#5fdd33" }}
               />
-              <span className="text-white">&nbsp;&nbsp;Remember Me</span>
+              <span
+                className="text-yellow-300
+              "
+              >
+                &nbsp;&nbsp;Remember Me
+              </span>
               <br />
               <br />
               <input type="submit" onClick={handleLogin} /> <br />
