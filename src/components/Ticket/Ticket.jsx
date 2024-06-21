@@ -61,15 +61,15 @@ const Ticket = () => {
     toast.success("Added");
   };
   return (
-    <div className="bg-bgBlack max-w-full mx-auto p-6 overflow-y-auto max-h-[90vh] ticket-scroll font-poppins">
-      <div className="max-w-5xl mt-5 bg-bgGray p-5 rounded-lg">
+    <div className="bg-bgBlack max-w-full mx-auto p-1 overflow-y-auto h-full ticket-scroll font-poppins">
+      <div className="max-w-5xl mt-0 bg-bgGray p-3 rounded-lg">
         <div>
-          <p className="text-3xl mb-4 text-white">New Ticket</p>
+          <p className="text-xl font-bold mb-2 text-white">New Ticket</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4 text-name">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="mb-4">
-              <label className="block mb-1">Name:</label>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 ml-2">
+            <div className="mb-0 mr-4">
+              <label className="block text-sm   mb-1">Name:</label>
               <input
                 type="text"
                 name="customer_name"
@@ -79,8 +79,8 @@ const Ticket = () => {
                 required
               />
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">Location:</label>
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">Location:</label>
               <input
                 type="text"
                 name="customer_location"
@@ -89,8 +89,8 @@ const Ticket = () => {
                 className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">Department:</label>
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">Department:</label>
               <input
                 type="text"
                 name="customer_department"
@@ -99,8 +99,8 @@ const Ticket = () => {
                 className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">Contact Person:</label>
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">Contact Person:</label>
               <input
                 type="text"
                 name="contact_person"
@@ -109,8 +109,8 @@ const Ticket = () => {
                 className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">Contact No:</label>
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">Contact No:</label>
               <input
                 type="tel"
                 name="contact_number"
@@ -119,8 +119,8 @@ const Ticket = () => {
                 className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">Email:</label>
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">Email:</label>
               <input
                 type="email"
                 name="contact_mail"
@@ -130,8 +130,8 @@ const Ticket = () => {
                 required
               />
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">Nature of Call:</label>
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">Nature of Call:</label>
               <input
                 name="nature_of_call"
                 value={formData.nature_of_call}
@@ -139,8 +139,8 @@ const Ticket = () => {
                 className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               ></input>
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">Type of Ticket:</label>
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">Type of Ticket:</label>
               <select
                 name="ticket_type"
                 value={formData.ticket_type}
@@ -164,8 +164,8 @@ const Ticket = () => {
                 </option>
               </select>
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">Domain:</label>
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">Domain:</label>
               <input
                 type="text"
                 name="domain"
@@ -174,8 +174,8 @@ const Ticket = () => {
                 className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">Sub Domain:</label>
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">Sub Domain:</label>
               <input
                 type="text"
                 name="sub_domain"
@@ -184,8 +184,8 @@ const Ticket = () => {
                 className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
-            <div className="mb-4">
-              <label className="block mb-1">
+            <div className="mb-0 mr-4">
+              <label className="block text-sm  mb-1">
                 Nature of Issue (Description):
               </label>
               <textarea
@@ -196,11 +196,11 @@ const Ticket = () => {
               ></textarea>
             </div>
           </div>
-          <div className="mb-4 flex justify-center items-center">
-            <div className="w-[40vw] flex flex-col items-center justify-center p-5 border-gray-500 bg-bgBlack rounded-lg border-dotted border-[2px]">
+          <div className="mb-0 mr-4 flex justify-center items-center">
+            <div className="w-[20vw] flex flex-col items-center justify-center p-1 border-gray-500 bg-bgBlack rounded-lg border-dotted border-[2px] p-3">
               {/* <FontAwesomeIcon icon={faPaperclip} /> */}
               {/* <FontAwesomeIcon icon={faUpload} /> */}
-              <label className="block mb-1 text-name font-poppins">
+              <label className="block text-sm  mb-1 text-name font-poppins">
                 Drag & Drop Your File Here
               </label>
               <p>OR</p>

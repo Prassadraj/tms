@@ -123,13 +123,10 @@ function Login({ onLogin }) {
                     </div> */}
         </div>
 
-        <br />
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <h6 className="text-center " style={{ color: "#64748B" }}>
+        <h6
+          className="text-center absolute bottom-10 left-[35vw]"
+          style={{ color: "#64748B" }}
+        >
           &#169;2022 Amvion Labs Private Limited . All Rights Reserved
         </h6>
       </div>
